@@ -2,7 +2,7 @@
 
 cd '#G'/gpio
 
-for (i in `{seq 1 500} ) {
+for (i in `{seq 1 100} ) {
 	echo `{mod $i  2} > OK
 	sleep .1
 }
