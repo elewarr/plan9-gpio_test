@@ -35,7 +35,7 @@ main(void)
 		for(i = 0; i < sizeof(u32int) * 8; i++)
 		{
 			state = event & (1 << i);
-			if(state >> 1)
+			if((state >> i) & 1)
 			{
 				print("%d: pin %d, state changed\n", reads, i);
 				if(i == 17) {
