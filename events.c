@@ -24,6 +24,7 @@ main(void)
 	pinfd = open("#G/gpio/GPIO0", OREAD);
 	if(!pinfd)
 	{
+		close(eventfd);
 		exits("pinfd");
 	}
 
